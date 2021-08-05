@@ -14,7 +14,7 @@ public class LoanTypeDao {
 	
 	
 
-	public void addLoanTypeDetails(String name, String interestRate) {
+	public void addLoanTypeDetails(String name, int interestRate) {
 		try {
 			// 1. configuring hibernate
 			Configuration configuration = new Configuration().configure();

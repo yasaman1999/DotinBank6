@@ -21,16 +21,16 @@ public class GrantCondition {
 	@Column(name="NAME")
 	private String name;
 	@Column(name="MINIMUMCONTRACTPERIOD")
-	private String minimumContractPeriod;
+	private int minimumContractPeriod;
 	
 	@Column(name="MAXIMUMCONTRACTPERIOD")
-	private String maximumContractPeriod;
+	private int maximumContractPeriod;
 	
 	@Column(name="MINIMUMCONTRACTAMOUNT")
-	private String minimumContractAmount;
+	private int minimumContractAmount;
 	
 	@Column(name="MAXIMUMCONTRACTAMOUNT")
-	private String maximumContractAmount;
+	private int maximumContractAmount;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	private LoanType loanType;
@@ -52,28 +52,30 @@ public class GrantCondition {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getMinimumContractPeriod() {
+	
+	
+	public int getMinimumContractPeriod() {
 		return minimumContractPeriod;
 	}
-	public void setMinimumContractPeriod(String minimumContractPeriod) {
+	public void setMinimumContractPeriod(int minimumContractPeriod) {
 		this.minimumContractPeriod = minimumContractPeriod;
 	}
-	public String getMaximumContractPeriod() {
+	public int getMaximumContractPeriod() {
 		return maximumContractPeriod;
 	}
-	public void setMaximumContractPeriod(String maximumContractPeriod) {
+	public void setMaximumContractPeriod(int maximumContractPeriod) {
 		this.maximumContractPeriod = maximumContractPeriod;
 	}
-	public String getMinimumContractAmount() {
+	public int getMinimumContractAmount() {
 		return minimumContractAmount;
 	}
-	public void setMinimumContractAmount(String minimumContractAmount) {
+	public void setMinimumContractAmount(int minimumContractAmount) {
 		this.minimumContractAmount = minimumContractAmount;
 	}
-	public String getMaximumContractAmount() {
+	public int getMaximumContractAmount() {
 		return maximumContractAmount;
 	}
-	public void setMaximumContractAmount(String maximumContractAmount) {
+	public void setMaximumContractAmount(int maximumContractAmount) {
 		this.maximumContractAmount = maximumContractAmount;
 	}
 	public LoanType getLoanType() {

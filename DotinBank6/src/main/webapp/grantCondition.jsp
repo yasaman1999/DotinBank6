@@ -15,7 +15,7 @@
 	<%
 	
 	  String name =(String) request.getAttribute("key1");
-	 String interestRate =(String) request.getAttribute("key2");
+	  int interestRate = (Integer) request.getAttribute("key2");
 	 
 	 session.setAttribute("key3", name);
 	 session.setAttribute("key4", interestRate);

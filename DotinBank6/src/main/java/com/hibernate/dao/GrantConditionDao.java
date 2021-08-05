@@ -17,7 +17,7 @@ public class GrantConditionDao {
 
 	/*private static final Logger logger = LogManager.getLogger(GrantConditionDao.class);*/
 
-	public void addGrantConditionDetails(Set<GrantCondition> grantConditionSet,String loanName,String interestRate) {
+	public void addGrantConditionDetails(Set<GrantCondition> grantConditionSet,String loanName,int interestRate) {
 		try {
 			// 1. configuring hibernate
 			Configuration configuration = new Configuration().configure();

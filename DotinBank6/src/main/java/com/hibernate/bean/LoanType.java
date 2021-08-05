@@ -26,7 +26,7 @@ public class LoanType {
 	private String name;
 	
 	@Column(name="INTERESTRATE")
-	private String interestRate;
+	private int interestRate;
 	
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="loantype_ID")
@@ -48,10 +48,12 @@ public class LoanType {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getInterestRate() {
+	
+	
+	public int getInterestRate() {
 		return interestRate;
 	}
-	public void setInterestRate(String interestRate) {
+	public void setInterestRate(int interestRate) {
 		this.interestRate = interestRate;
 	}
 	public Set<GrantCondition> getGrantConditions() {

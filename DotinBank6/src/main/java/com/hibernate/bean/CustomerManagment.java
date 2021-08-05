@@ -1,8 +1,6 @@
 package com.hibernate.bean;
 
-import java.text.SimpleDateFormat;
 
-import java.util.Date;
 
 
 public class CustomerManagment {

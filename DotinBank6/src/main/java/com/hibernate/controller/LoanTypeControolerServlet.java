@@ -21,7 +21,7 @@ public class LoanTypeControolerServlet extends HttpServlet {
 		
 		
 		String name = request.getParameter("name");
-		String interestRate = request.getParameter("interestRate");
+		int interestRate =Integer.parseInt(request.getParameter("interestRate"));
 	
 		
 		

@@ -28,17 +28,18 @@ public class GrantConditionControllerServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		String loanName = (String) session.getAttribute("key3");
-		String interestRate = (String) session.getAttribute("key4");
+		int interestRate = (Integer) session.getAttribute("key4");
+		
 		
 		Set<GrantCondition> grantConditionSet = new HashSet<GrantCondition>();
 		String[] grantConditions = request.getParameterValues("grantCondition");
 		for (int i = 0; i< grantConditions.length; i++) {
 			StringTokenizer st = new StringTokenizer(grantConditions[i], "#");
 			String name = st.nextToken();
-			String minimumContractPeriod = st.nextToken();
-			String maximumContractPeriod = st.nextToken();
-			String minimumContractAmount = st.nextToken();
-			String maximumContractAmount = st.nextToken();
+			int minimumContractPeriod = Integer.parseInt(st.nextToken());
+			int maximumContractPeriod = Integer.parseInt(st.nextToken());
+			int minimumContractAmount = Integer.parseInt(st.nextToken());
+			int maximumContractAmount = Integer.parseInt(st.nextToken());
 			
 			GrantCondition grantcondition = new GrantCondition();
 			grantcondition.setName(name);
