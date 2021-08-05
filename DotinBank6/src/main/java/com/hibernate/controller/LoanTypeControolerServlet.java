@@ -1,6 +1,8 @@
 package com.hibernate.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +26,10 @@ public class LoanTypeControolerServlet extends HttpServlet {
 			LoanTypeDao loanDao = new LoanTypeDao();
 			
 			loanDao.addLoanTypeDetails(name, interestRate);
-			response.sendRedirect("grantCondition.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("grantCondition.jsp");
+			rd.forward(request, response);
+			
+			/*response.sendRedirect("grantCondition.jsp");*/
 				
 			
 			}

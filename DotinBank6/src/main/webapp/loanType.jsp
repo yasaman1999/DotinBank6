@@ -38,7 +38,7 @@
 				<td style="padding-top: 50px"><input dir="rtl" type="text" name="name"
 					size="30" id="n1" /></td>
 				<td
-					style="padding-top: 50px; font-family: verdana; text-align: right;">:نام
+					style="padding-top: 50px; font-family: verdana; text-align: right;font-family:courier">:نام
 					نوع تسهیلات</td>
 
 			</tr>
@@ -46,7 +46,7 @@
 				<td style="padding-top: 20px"><input type="text"
 					name="interestRate" size="30" id="n2" /></td>
 				<td
-					style="padding-top: 20px; font-family: verdana; text-align: right">:نرخ
+					style="padding-top: 20px; font-family: verdana; text-align: right;font-family:courier">:نرخ
 					سود</td>
 
 			</tr>
@@ -55,9 +55,9 @@
 
 
 				<td align="center"
-					style="padding-left: 100px; padding-top: 40px; font-family: verdana">
+					style="padding-left: 100px; padding-top: 40px; font-family:courier">
 					<input type="submit" value="ثبت" size="100"
-					style="text-align: center; font-family: verdana">
+					style="text-align: center; font-family:courier">
 				</td>
 			</tr>
 
@@ -65,5 +65,8 @@
 		</table>
 
 	</form>
+	
+	
+	
 </body>
 </html>

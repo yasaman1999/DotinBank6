@@ -17,7 +17,7 @@ public class GrantConditionDao {
 
 	/*private static final Logger logger = LogManager.getLogger(GrantConditionDao.class);*/
 
-	public void addGrantConditionDetails(Set<GrantCondition> grantConditionSet) {
+	public void addGrantConditionDetails(Set<GrantCondition> grantConditionSet,String loanName,String interestRate) {
 		try {
 			// 1. configuring hibernate
 			Configuration configuration = new Configuration().configure();
@@ -34,8 +34,9 @@ public class GrantConditionDao {
 			logger.info("before new grantcondition");*/
 			
 			LoanType loanType = new LoanType();
-			loanType.setName("HAMID");
-			loanType.setInterestRate("50");
+			
+			loanType.setName(loanName);
+			loanType.setInterestRate(interestRate);
 			session.save(loanType);
 			
 			for (Iterator<GrantCondition> it = grantConditionSet.iterator(); 

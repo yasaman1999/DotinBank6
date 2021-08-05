@@ -12,7 +12,7 @@
 
 
 
-	<h2 align="center" style="color:black;font-family:courier">به سیستم بانکداری خوش آمدید</h2>
+	<h2 align="center" style="color:black,;font-family:courier">به سیستم بانکداری خوش آمدید</h2>
 	<br></br>
 
 	<form action="addCustomer" method="get">
@@ -21,7 +21,7 @@
 			<tr>
 				<td style="padding-top: 20px; padding-bottom: 20px"><input
 					type="submit" value="تعریف مشتری" size="70"
-					style="text-align: center; width: 200px;font-family:verdana"></td>
+					style="text-align: center; width: 200px;font-family:courier"></td>
 			</tr>
 		</table>
 	</form>
@@ -33,7 +33,7 @@
 
 				<td style="padding-top: 20; padding-bottom: 20px"><input
 					type="submit" value=" تعیین نوع تسهیلات " size="70"
-					style="text-align: center; width: 200px;font-family:verdana"></td>
+					style="text-align: center; width: 200px;font-family:courier"></td>
 			</tr>
 		</table>
 
@@ -46,7 +46,7 @@
 
 				<td style="padding-top: 20; padding-bottom: 20px"><input
 					type="submit" value="تشکیل پرونده" size="70"
-					style="text-align: center; width: 200px;font-family:verdana"></td>
+					style="text-align: center; width: 200px;font-family:courier"></td>
 			</tr>
 		</table>
 

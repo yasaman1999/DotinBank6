@@ -6,7 +6,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
 <title>Insert title here</title>
 </head>
+<%
+
+	String name = request.getParameter("name");
+	String interestRate = request.getParameter("interestRate");
+	request.setAttribute("name", name);
+	request.setAttribute("interestRate", interestRate);
+	/* RequestDispatcher rd = request.getRequestDispatcher("GrantConditionControllerservlet");
+	rd.forward(request, response); */
+
+
+%>
 <body background="pic.jpg"; style="background-repeat: no-repeat; background-size: cover; padding-top:50px;">
+
 
 	<script language="Javascript">
 	function valid(){
@@ -68,7 +80,7 @@
 				<td style="padding-top:50px"><input dir="rtl" type="text" name="name"
 					size="30" id="n1" /></td>
 				<td
-					style="padding-top: 50px; font-family: verdana; text-align: right;">:نام
+					style="padding-top: 50px; font-family: verdana; text-align: right;font-family:courier">:نام
 					</td>
 
 			</tr>
@@ -76,7 +88,7 @@
 				<td style="padding-top: 20px"><input type="text"
 					name="minimumContractPeriod" size="30" id="n2"/></td>
 				<td
-					style="padding-top: 20px; font-family: verdana; text-align: right">:حداقل مدت قرارداد
+					style="padding-top: 20px; font-family: verdana; text-align: right;font-family:courier">:حداقل مدت قرارداد
 					</td>
 			</tr>
 			
@@ -84,7 +96,7 @@
 				<td style="padding-top: 20px"><input type="text"
 					name="maximumContractPeriod" size="30" id="n3" /></td>
 				<td
-					style="padding-top: 20px; font-family: verdana; text-align: right">:حداکثر مدت قرارداد
+					style="padding-top: 20px; font-family: verdana; text-align: right;font-family:courier">:حداکثر مدت قرارداد
 					</td>
 			</tr>
 			
@@ -92,7 +104,7 @@
 				<td style="padding-top: 20px"><input type="text"
 					name="minimumContractAmount" size="30" id="n4" /></td>
 				<td
-					style="padding-top: 20px; font-family: verdana; text-align: right">:حداقل مبلغ قرارداد
+					style="padding-top: 20px; font-family: verdana; text-align: right;font-family:courier">:حداقل مبلغ قرارداد
 					</td>
 			</tr>
 			
@@ -100,7 +112,7 @@
 				<td style="padding-top: 20px"><input type="text"
 					name="maximumContractAmount" size="30" id="n5" /></td>
 				<td
-					style="padding-top: 20px; font-family: verdana; text-align: right">:حداکثر مبلغ قرارداد
+					style="padding-top: 20px; font-family: verdana; text-align: right;font-family:courier">:حداکثر مبلغ قرارداد
 					</td>
 			</tr>
 		<tr>
@@ -118,20 +130,17 @@
 					method="get" onsubmit="return submitGrantConditions()">
 					<div id="container"></div>
 					<input type="submit" value="ثبت" size="120"
-						style="text-align: center; font-family: verdana">
+						style="text-align: center; font-family:courier">
 				</form>  
 
 
 			</td>
-		<!-- </tr> 
+		 </tr> 
 		
-			<tr>
-			<td align="center" style="padding-left:100px;padding-top:20px">
-			<button type="button" onclick="submit()">ثبت</button>
-			
-			</td>
-		</tr> -->
+		
 		</table>
+		
+		
 			
 
 

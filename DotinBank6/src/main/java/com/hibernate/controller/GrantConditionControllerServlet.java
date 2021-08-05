@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.hibernate.bean.GrantCondition;
+import com.hibernate.bean.LoanType;
 import com.hibernate.dao.GrantConditionDao;
 
 
@@ -22,6 +23,9 @@ public class GrantConditionControllerServlet extends HttpServlet {
        
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String loanName = request.getParameter("name");
+		String interestRate = request.getParameter("interestRate");
 		
 		Set<GrantCondition> grantConditionSet = new HashSet<GrantCondition>();
 		String[] grantConditions = request.getParameterValues("grantCondition");
@@ -47,7 +51,7 @@ public class GrantConditionControllerServlet extends HttpServlet {
 			
 			GrantConditionDao grantconditionDao = new GrantConditionDao();
 			
-			grantconditionDao.addGrantConditionDetails(grantConditionSet);
+			grantconditionDao.addGrantConditionDetails(grantConditionSet,loanName,interestRate);
 			
 			response.sendRedirect("CustomerAddSuccessful.jsp");
 				

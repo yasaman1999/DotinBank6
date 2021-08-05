@@ -98,10 +98,10 @@
 
 			<tr>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px; padding-right: 55px">:نام
+					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:نام
 					خانوادگی</td>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px">:نام</td>
+					style="font-family:courier; text-align: right; padding-top: 20px">:نام</td>
 			</tr>
 			<tr>
 
@@ -113,9 +113,9 @@
 
 			<tr>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px; padding-right: 55px">:جنسیت</td>
+					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:جنسیت</td>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px">:نام
+					style="font-family:courier; text-align: right; padding-top: 20px">:نام
 					پدر</td>
 			</tr>
 
@@ -130,9 +130,9 @@
 			<tr>
 
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px; padding-right: 55px">:کدملی</td>
+					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:کدملی</td>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px">:تاریخ
+					style="font-family:courier; text-align: right; padding-top: 20px">:تاریخ
 					تولد</td>
 
 
@@ -151,10 +151,10 @@
 
 			<tr>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px; padding-right: 55px">:آدرس
+					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:آدرس
 					پستی</td>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px">:محل
+					style="font-family:courier; text-align: right; padding-top: 20px">:محل
 					تولد</td>
 			</tr>
 
@@ -168,9 +168,9 @@
 			<tr>
 
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px; padding-right: 55px">:تلفن</td>
+					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:تلفن</td>
 				<td
-					style="font-family: verdana; text-align: right; padding-top: 20px">:موبایل</td>
+					style="font-family:courier; text-align: right; padding-top: 20px">:موبایل</td>
 
 
 
@@ -193,7 +193,7 @@
 				<td align="center"
 					style="padding-left: 250px; padding-top: 20px; font-family: verdana">
 					<input type="submit" value="ثبت" size="100"
-					style="text-align: center; font-family: verdana">
+					style="text-align: center; font-family:courier">
 				</td>
 			</tr>
 		</table>
