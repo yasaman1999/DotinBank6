@@ -10,6 +10,8 @@
 <body background="pic.jpg"
 	; style="background-repeat: no-repeat; background-size: cover; padding-top: 250px;">
 
+
+	
 	<script language="Javascript">
 		function valid() {
 			a = document.getElementById("n1")
@@ -65,6 +67,7 @@
 		</table>
 
 	</form>
+	
 	
 	
 	

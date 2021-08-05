@@ -13,7 +13,7 @@
 
 	<h2 align="center" style="color:black;font-family:courier;font-size:20px;font-family:courier">کدملی نادرست است</h2>
 	
-	<form action="backToForm">
+	<form action="backToForm" method="get">
 	<input type="submit" value="بازگشت" size="70"
 					style="width: 100px;font-family:courier;margin-left: 46%">
 	

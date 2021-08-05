@@ -25,7 +25,7 @@ public class LoanType {
 	@Column(name="NAME", nullable=false)
 	private String name;
 	
-	@Column(name="INTERESTRATE", nullable=false)
+	@Column(name="INTERESTRATE")
 	private String interestRate;
 	
 	@OneToMany(cascade=CascadeType.ALL)

@@ -6,20 +6,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
 <title>Insert title here</title>
 </head>
-<%
-
-	String name = request.getParameter("name");
-	String interestRate = request.getParameter("interestRate");
-	request.setAttribute("name", name);
-	request.setAttribute("interestRate", interestRate);
-	/* RequestDispatcher rd = request.getRequestDispatcher("GrantConditionControllerservlet");
-	rd.forward(request, response); */
 
 
-%>
+
+
 <body background="pic.jpg"; style="background-repeat: no-repeat; background-size: cover; padding-top:50px;">
 
-
+	<%
+	
+	  String name =(String) request.getAttribute("key1");
+	 String interestRate =(String) request.getAttribute("key2");
+	 
+	 session.setAttribute("key3", name);
+	 session.setAttribute("key4", interestRate);
+	 
+	
+	%>
+	
+	
 	<script language="Javascript">
 	function valid(){
 	    a=document.getElementById("n1")
@@ -68,6 +72,7 @@
 	    }
 	
 	</script>
+	
 	
 	<table align="right" id="newTable"
 			style="border-color:black; border-width: 1px; border-style: solid">

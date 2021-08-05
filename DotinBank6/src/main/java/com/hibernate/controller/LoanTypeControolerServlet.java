@@ -18,10 +18,17 @@ public class LoanTypeControolerServlet extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
+		
 		String name = request.getParameter("name");
 		String interestRate = request.getParameter("interestRate");
+	
+		
 		
 		try {
+			
+			request.setAttribute("key1", name);
+			request.setAttribute("key2", interestRate);
 			
 			LoanTypeDao loanDao = new LoanTypeDao();
 			
@@ -39,7 +46,6 @@ public class LoanTypeControolerServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
 
 }
 	

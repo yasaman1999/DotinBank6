@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.hibernate.bean.GrantCondition;
 import com.hibernate.bean.LoanType;
@@ -24,8 +25,10 @@ public class GrantConditionControllerServlet extends HttpServlet {
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String loanName = request.getParameter("name");
-		String interestRate = request.getParameter("interestRate");
+		HttpSession session = request.getSession();
+		
+		String loanName = (String) session.getAttribute("key3");
+		String interestRate = (String) session.getAttribute("key4");
 		
 		Set<GrantCondition> grantConditionSet = new HashSet<GrantCondition>();
 		String[] grantConditions = request.getParameterValues("grantCondition");
@@ -48,6 +51,7 @@ public class GrantConditionControllerServlet extends HttpServlet {
 		}
 	
 		try {
+			
 			
 			GrantConditionDao grantconditionDao = new GrantConditionDao();
 			

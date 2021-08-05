@@ -9,7 +9,7 @@
 <body background="pic.jpg"
 	; style="padding-top: 250px; background-repeat: no-repeat; background-size: cover">
 	<h3 align="center" style="color:black;font-family:courier">اطلاعات با موفقیت ثبت شد</h3>
-	<form action="backToMainPage">
+	<form action="backToMainPage" method="get">
 	<input type="submit" value="بازگشت" size="70"
 					style="width: 100px;font-family:courier;margin-left: 46%">
 	</form>
