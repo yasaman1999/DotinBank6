@@ -7,8 +7,8 @@
 	content="text/html; charset=windows-1256">
 <title>تکمیل فرم</title>
 </head>
-<body background="pic.jpg"
-	; style="background-repeat: no-repeat; background-size: cover; padding-top: 200px;">
+<body background="picc.jpeg"
+	; style="background-repeat: no-repeat; background-size: cover; padding-top:10px">
 
 	<script language="Javascript">
 	function valid(){
@@ -91,113 +91,120 @@
 	
 	</script>
 
-	<form name="notnull" action="addCustomerSuccess" method="get"
-		onsubmit="return valid()">
+	<form action="addCustomerSuccess" method="get">
 		<table align="center"
-			style="border-color: black; border-width: 1px; border-style: solid">
-
+			style="border-color: black; border-width: 1px;
+		 border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;width:410px">
+			
 			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="name"
+					size="30" id="n1" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:نام
-					خانوادگی</td>
-				<td
-					style="font-family:courier; text-align: right; padding-top: 20px">:نام</td>
+					style="padding-top: 5px;text-align: right;font-family:courier">:نام
+					</td>
+
 			</tr>
 			<tr>
-
-				<td style="padding-right: 50px"><input dir="rtl" type="text"
-					name="family" size="30" id="n2"></td>
-				<td><input dir="rtl" type="text" name="name" size="30" id="n1"></td>
-
-			</tr>
-
-			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" 
+					name="family" size="30" id="n2" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:جنسیت</td>
+					style="padding-top: 5px; text-align: right;font-family:courier">:نام خانوادگی
+					</td>
+
+			</tr>
+			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="fatherName"
+					size="30" id="n3" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px">:نام
-					پدر</td>
+					style="padding-top: 5px; text-align: right;font-family:courier">:نام پدر
+					</td>
+
 			</tr>
-
 			<tr>
-				<td style="padding-right: 50px"><input type="text"
-					name="gender" size="30" id="n4"></td>
-				<td><input dir="rtl" type="text" name="fatherName" size="30" id="n3"></td>
-			</tr>
-
-
-
-			<tr>
-
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="gender"
+					size="30" id="n4" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:کدملی</td>
+					style="padding-top: 5px; text-align: right;font-family:courier">:جنسیت
+					</td>
+
+			</tr>
+			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="birthday"
+					size="30" id="n5" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px">:تاریخ
-					تولد</td>
-
-
+					style="padding-top: 5px; text-align: right;font-family:courier">:تاریخ تولد
+					</td>
 
 			</tr>
-
 			<tr>
-
-				<td style="padding-right: 50px"><input type="text"
-					name="nationalCode" size="30" id="n6"></td>
-				<td><input type="text" name="birthday" size="30" id="n5"></td>
-
-
-
-			</tr>
-
-			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="nationalCode"
+					size="30" id="n6" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:آدرس
-					پستی</td>
+					style="padding-top: 5px; text-align: right;font-family:courier">:کدملی
+					</td>
+
+			</tr>
+			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="placeOfBirth"
+					size="30" id="n7" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px">:محل
-					تولد</td>
+					style="padding-top: 5px;text-align: right;font-family:courier">:محل تولد
+					</td>
+
 			</tr>
-
 			<tr>
-				<td style="padding-right: 50px"><input dir="rtl" type="text"
-					name="address" size="30" id="n8"></td>
-				<td><input dir="rtl" type="text" name="placeOfBirth" size="30" id="n7"></td>
-			</tr>
-
-
-			<tr>
-
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="address"
+					size="30" id="n8" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px; padding-right: 55px">:تلفن</td>
+					style="padding-top: 5px;text-align: right;font-family:courier">:آدرس
+					</td>
+
+			</tr>
+			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="mobileNumber"
+					size="30" id="n9" /></td>
 				<td
-					style="font-family:courier; text-align: right; padding-top: 20px">:موبایل</td>
-
-
-
-			</tr>
-
-			<tr>
-
-				<td style="padding-right: 50px"><input dir="rtl" type="text"
-					name="phoneNumber" size="30" id="n10"></td>
-				<td><input dir="rtl" type="text" name="mobileNumber" size="30" id="n9"></td>
+					style="padding-top: 5px;text-align: right;font-family:courier">:موبایل
+					</td>
 
 			</tr>
-
-
-
-
 			<tr>
+				<td style="padding-top: 5px"><input dir="rtl" type="text" name="phoneNumber"
+					size="30" id="n10" /></td>
+				<td
+					style="padding-top: 5px ;text-align: right;font-family:courier">:تلفن
+					</td>
 
-
+			
+			
+		
+			<tr>
 				<td align="center"
-					style="padding-left: 250px; padding-top: 20px; font-family: verdana">
-					<input type="submit" value="ثبت" size="100"
+					style="padding-left: 120px; padding-top: 40px; font-family:courier">
+					<input type="submit" value="ثبت" onclick="return valid()" size="100"
 					style="text-align: center; font-family:courier">
 				</td>
 			</tr>
-		</table>
-
+			</table>
 	</form>
+	
+	<form action="backToMainPage" method="get">
+		<table align="center"
+			style="border-right:1px solid black;border-left:1px solid black;border-bottom:1px solid black;width:410px">
+		<tr>
+
+
+				<td align="center"
+					style="padding-left: 140px; padding-top: 20px;padding-right:160px; font-family:courier">
+					<input type="submit" value="بازگشت" size="100" 
+					style="text-align: center; font-family:courier height:50px; width:100px">
+				</td>
+			</tr>
+		
+		
+		</table>
+		
+		
+		</form>
 </body>
 </html>

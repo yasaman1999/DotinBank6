@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <title>error</title>
-<body background="pic.jpg"
+<body background="picc.jpeg"
 	; style="padding-top: 250px; background-repeat: no-repeat; background-size: cover">
 
 

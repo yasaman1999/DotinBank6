@@ -7,17 +7,16 @@
 
 </head>
 <title>welcome</title>
-<body background="picc.jpg"
+<body background="picc.jpeg"
 	; style="padding-top: 250px; background-repeat: no-repeat; background-size: cover">
 
 
 
-	<h2 align="center" style="color:black,;font-family:courier">به سیستم بانکداری خوش آمدید</h2>
+	<h2 align="center" style="color:black,;font-family:courier;text-shadow:4px 4px 3px white,7px 7px 3px silver;">به سیستم بانکداری خوش آمدید</h2>
 	<br></br>
 
 	<form action="addCustomer" method="get">
-		<table align="center"
-			style="border-color:white; border-width: 1px; border-style: solid">
+		<table align="center">
 			<tr>
 				<td style="padding-top: 20px; padding-bottom: 20px"><input
 					type="submit" value="تعریف مشتری" size="70"
@@ -27,8 +26,7 @@
 	</form>
 
 	<form action="chooseLoanType" method="get">
-		<table align="center"
-			style="border-color:white; border-width: 1px; border-style: solid">
+		<table align="center">
 			<tr>
 
 				<td style="padding-top: 20; padding-bottom: 20px"><input
@@ -40,8 +38,7 @@
 	</form>
 
 	<form action="loanFile" method="get">
-		<table align="center"
-			style="border-color:white; border-width: 1px; border-style: solid;">
+		<table align="center">
 			<tr>
 
 				<td style="padding-top: 20; padding-bottom: 20px"><input

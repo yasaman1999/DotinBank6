@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
 <title>Insert title here</title>
 </head>
-<body background="pic.jpg"
+<body background="picc.jpeg"
 	; style="padding-top: 250px; background-repeat: no-repeat; background-size: cover">
 	<h3 align="center" style="color:black;font-family:courier">اطلاعات با موفقیت ثبت شد</h3>
 	<form action="backToMainPage" method="get">

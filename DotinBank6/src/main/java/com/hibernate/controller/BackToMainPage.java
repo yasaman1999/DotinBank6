@@ -15,7 +15,24 @@ public class BackToMainPage extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.sendRedirect("main.jsp");
+		String servletPath = request.getServletPath();
+		
+		if("/backToMainPage".equalsIgnoreCase(servletPath))
+	    {
+	        response.sendRedirect("main.jsp");
+
+	    }
+
+	    
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	
