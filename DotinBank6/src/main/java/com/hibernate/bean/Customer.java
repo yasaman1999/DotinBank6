@@ -46,7 +46,9 @@ public class Customer {
 	@Column(name = "PHONENUMBER", nullable = false)
 	private String phoneNumber;
 	
-	private int customerNumber=1;
+	@Column(name = "CUSTOMERNUMBER", nullable = false)
+	private int customerNumber = 1;
+	
 	public int getId() {
 		return id;
 	}

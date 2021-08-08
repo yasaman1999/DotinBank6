@@ -48,7 +48,7 @@ public class CustomerDao {
 			customer.setAddress(address);
 			customer.setMobileNumber(mobileNumber);
 			customer.setPhoneNumber(phoneNumber);
-
+			
 			String SQL_QUERY = "select max(customerNumber)from Customer customer";
 			Query query = session.createQuery(SQL_QUERY);
 			List list = query.list();
