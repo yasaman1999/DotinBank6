@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type"
 	content="text/html; charset=windows-1256">
-<title>Insert title here</title>
+<title>تکمیل فرم</title>
 <script language="Javascript">
 		function valid() {
 			a = document.getElementById("n1")

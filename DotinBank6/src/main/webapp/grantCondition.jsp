@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
-<title>Insert title here</title>
+<title>تکمیل فرم</title>
 <script language="Javascript">
 	function valid(){
 	    a=document.getElementById("n1")
@@ -53,6 +53,20 @@
 	    }
 	function addRow() {
 		  var table = document.getElementById("newTable");
+		  /* var header = table.createTHead();
+		  var row = header.insertRow(0);
+		  var cell1 = row.insertCell(0);
+		  var cell2 = row.insertCell(1);
+		  var cell3 = row.insertCell(2);
+		  var cell4 = row.insertCell(3);
+		  var cell5 = row.insertCell(4);
+		  cell1.innerHTML ="<b>  نام  </b>";
+		  cell2.innerHTML ="<b> حداقل مدت قرارداد </b>";
+		  cell3.innerHTML ="<b>حداکثر مدت قرارداد</b>";
+		  cell4.innerHTML ="<b>حداقل مبلغ قرارداد</b>";
+		  cell5.innerHTML ="<b>حداکثر مدت قرارداد</b>"; */
+		  
+		  
 		  var row = table.insertRow(0);
 		  var cell1 = row.insertCell(0);
 		  var cell2 = row.insertCell(1);

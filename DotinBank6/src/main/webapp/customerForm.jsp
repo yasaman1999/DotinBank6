@@ -24,13 +24,13 @@
 	    j=document.getElementById("n10")
 	    
 	    if(n1.value ==''){
-        	alert("نام  را وارد کنید");
+        	alert("نام را وارد کنید");
         	n1.focus();
         	return false;
         }
 	    
 	        if(n2.value ==''){
-	        	alert("نام  خانوادگی را وارد کنید");
+	        	alert("نام خانوادگی را وارد کنید");
 	        	n2.focus();
 	        	return false;
 	        }
@@ -80,7 +80,7 @@
 	        }
 	        
 	        if(n10.value ==''){
-	        	alert(" تلفن  را وارد کنید");
+	        	alert(" تلفن را وارد کنید");
 	        	n10.focus();
 	        	return false;
 	        }

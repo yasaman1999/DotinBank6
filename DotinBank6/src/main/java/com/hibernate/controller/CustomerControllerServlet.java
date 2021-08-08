@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Query;
 
 import com.hibernate.bean.CustomerManagment;
 import com.hibernate.dao.CustomerDao;
@@ -31,7 +32,7 @@ public class CustomerControllerServlet extends HttpServlet {
 		String address = request.getParameter("address");
 		String mobileNumber = request.getParameter("mobileNumber");
 		String phoneNumber = request.getParameter("phoneNumber");
-
+		
 		
 		
 		CustomerManagment customerManagment = new CustomerManagment();

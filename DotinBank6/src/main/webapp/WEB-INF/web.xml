@@ -46,6 +46,12 @@
 		<description></description>
 		<servlet-class>com.hibernate.controller.GrantConditionControllerServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>LoanFileControllerServlet</servlet-name>
+		<display-name>LoanFileControllerServlet</display-name>
+		<description></description>
+		<servlet-class>com.hibernate.controller.LoanFileControllerServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>MainControllerServlet</servlet-name>
 		<url-pattern>/addCustomer</url-pattern>
@@ -57,6 +63,10 @@
 	<servlet-mapping>
 	<servlet-name>MainControllerServlet</servlet-name>
 	<url-pattern>/chooseGrantCondition</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	<servlet-name>MainControllerServlet</servlet-name>
+	<url-pattern>/loanFile</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>CustomerControllerServlet</servlet-name>
@@ -81,6 +91,10 @@
 	<servlet-mapping>
 		<servlet-name>GrantConditionControllerServlet</servlet-name>
 		<url-pattern>/registrationofGrantConditions</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoanFileControllerServlet</servlet-name>
+		<url-pattern>/checkCustomer</url-pattern>
 	</servlet-mapping>
 
 </web-app>

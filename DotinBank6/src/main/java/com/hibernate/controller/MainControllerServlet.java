@@ -28,6 +28,11 @@ public class MainControllerServlet extends HttpServlet {
 	    	response.sendRedirect("loanType.jsp");
 	    }
 	    
+	    if("/loanFile".equalsIgnoreCase(servletPath))
+	    {
+	    	response.sendRedirect("loanFile.jsp");
+	    }
+	    
 	    if("/chooseGrantCondition".equals(servletPath)) {
 	    	response.sendRedirect("grantCondition.jsp");
 	    }

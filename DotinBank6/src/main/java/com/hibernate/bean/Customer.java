@@ -13,39 +13,40 @@ public class Customer {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID", unique = true, nullable = false)
+	@Column(name = "ID", nullable = false)
 	private int id;
 	
-	@Column(name = "NAME", unique = true, nullable = false)
+	@Column(name = "NAME",  nullable = false)
 	private String name;
 	
-	@Column(name = "FAMILY", unique = true, nullable = false)
+	@Column(name = "FAMILY",  nullable = false)
 	private String family;
 	
-	@Column(name = "FATHERNAME", unique = true, nullable = false)
+	@Column(name = "FATHERNAME", nullable = false)
 	private String fatherName;
 	
-	@Column(name = "GENDER", unique = true, nullable = false)
+	@Column(name = "GENDER",nullable = false)
 	private boolean gender;
 	
-	@Column(name = "BIRTHDAY", unique = true, nullable = false)
+	@Column(name = "BIRTHDAY",nullable = false)
 	private String birthday;
 	
-	@Column(name = "NATIONALCODE", unique = true, nullable = false)
+	@Column(name = "NATIONALCODE",nullable = false)
 	private String nationalCode;
 	
-	@Column(name = "PLACEOFBIRTH", unique = true, nullable = false)
+	@Column(name = "PLACEOFBIRTH", nullable = false)
 	private String placeOfBirth;
 	
-	@Column(name = "ADDRESS", unique = true, nullable = false)
+	@Column(name = "ADDRESS",  nullable = false)
 	private String address;
 	
-	@Column(name = "MOBILENUMBER", unique = true, nullable = false)
+	@Column(name = "MOBILENUMBER", nullable = false)
 	private String mobileNumber;
 	
-	@Column(name = "PHONENUMBER", unique = true, nullable = false)
+	@Column(name = "PHONENUMBER", nullable = false)
 	private String phoneNumber;
-	private int customerNumber;
+	
+	private int customerNumber=1;
 	public int getId() {
 		return id;
 	}
