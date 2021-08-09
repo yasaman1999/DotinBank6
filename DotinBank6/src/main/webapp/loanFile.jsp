@@ -36,17 +36,58 @@
 
 
 				<td align="center"
-					style="padding-left: 130px; padding-top: 40px; font-family:courier">
+					style="padding-left: 120px; padding-top: 40px; font-family:courier">
 					<input type="submit" value="بازیابی" onclick="return valid()" size="100"
 					style="text-align: center; font-family:courier">
 					
 				</td>
 			</tr>
+			<tr>
+			
+			<td  align="center"
+					style=" font-family:Arial;padding-top: 20px;padding-left: 82px">
+			
+			<%
+			String name =(String) request.getAttribute("Key1");
+			String family =(String) request.getAttribute("Key2");
+			if(name != null & family!= null){
+				out.print(" نام و نام خانوادگی:  " + name + " " + family);
+			}
+			
+		
+			%>
+			
+			</td>
+			
+			
+			
+			</tr>
 		    </table>
 
 	</form>
 	
-	<form action="backToMainPage" method="get">
+	<form action="goToLoanListPage" method="get">
+		<table align="center"
+		style="border-right:1px solid black;border-left:1px solid black;width:390px">
+		
+		<tr>
+
+
+				<td align="center"
+					style="padding-left: 140px; padding-top: 20px;padding-right:140px; font-family:courier">
+					<input type="submit" value="تایید" size="100" 
+					style="text-align: center; font-family:courier height:50px; width:100px">
+				</td>
+			</tr>
+		
+		
+		</table>
+		
+		
+		</form>
+		
+		
+		<form action="backToMainPage" method="get">
 		<table align="center"
 		style="border-right:1px solid black;border-left:1px solid black;border-bottom:1px solid black;width:390px">
 		
@@ -65,7 +106,7 @@
 		
 		
 		</form>
-	
+		
 		
 		
 

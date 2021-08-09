@@ -45,7 +45,10 @@ public class LoanFileControllerServlet extends HttpServlet {
 					String family = (String)Customer[1];
 					request.setAttribute("Key1", name);
 					request.setAttribute("Key2", family);
+				
 				 }
+				RequestDispatcher rd = request.getRequestDispatcher("loanFile.jsp");
+				rd.forward(request, response);
 				
 				
 				transaction.commit();
