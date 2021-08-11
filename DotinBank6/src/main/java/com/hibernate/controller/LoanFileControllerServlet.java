@@ -36,17 +36,27 @@ public class LoanFileControllerServlet extends HttpServlet {
 
 		
 				Query query1 = session.createQuery(
-						"select customer.name,customer.family from Customer customer WHERE customer.customerNumber=:customerNumber");
+						"select customer.id,customer.name,customer.family from Customer customer WHERE customer.customerNumber=:customerNumber");
 				query1.setParameter("customerNumber",customerNumber);
+				if(query1.getResultList() != null) {
 				List<Object[]> collection = query1.getResultList();
 				for(Object[] Customer: collection)
 				 {	
-					String name = (String)Customer[0];
-					String family = (String)Customer[1];
-					request.setAttribute("Key1", name);
-					request.setAttribute("Key2", family);
+					int id =(Integer) Customer[0];
+					String name = (String)Customer[1];
+					String family = (String)Customer[2];
+					request.setAttribute("id",id);
+					request.setAttribute("name", name);
+					request.setAttribute("family", family);
+					
 				
 				 }
+				}else {
+					System.out.println("null input");
+				}
+				
+				
+				
 				RequestDispatcher rd = request.getRequestDispatcher("loanFile.jsp");
 				rd.forward(request, response);
 				

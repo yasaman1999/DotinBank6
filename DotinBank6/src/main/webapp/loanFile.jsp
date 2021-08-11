@@ -48,11 +48,16 @@
 					style=" font-family:Arial;padding-top: 20px;padding-left: 82px">
 			
 			<%
-			String name =(String) request.getAttribute("Key1");
-			String family =(String) request.getAttribute("Key2");
-			if(name != null & family!= null){
-				out.print(" نام و نام خانوادگی:  " + name + " " + family);
+			String name =(String) request.getAttribute("name");
+			String family =(String) request.getAttribute("family");
+			if(name != null & family != null){
+				out.print(name + " " + family);
+			}else{
+				out.print("شماره مشتری موجود نمیباشد");
 			}
+		
+			
+			session.setAttribute("idKey", request.getAttribute("id"));
 			
 		
 			%>
