@@ -39,9 +39,9 @@ public class LoanListControllerServlet extends HttpServlet {
 
 		
 				Query query = session2.createQuery(
-						"select loanType.name from LoanType loanType WHERE loanType.id=:id");
-				query.setParameter("id",id);
-				List list = query.list();
+						"select distinct loanType.name from LoanType loanType ");
+				/*query.setParameter("id",id);*/
+				ArrayList list =(ArrayList) query.list();
 				
 					
 					request.setAttribute("list", list);

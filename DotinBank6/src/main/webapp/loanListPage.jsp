@@ -12,60 +12,31 @@
 <body background="picc.jpeg"
 	; style="padding-top: 10px; background-repeat: no-repeat; background-size: cover;width:400px">
 	
-	<%ArrayList list= (ArrayList)request.getAttribute("list"); %>
+	 <%List list= (List)request.getAttribute("list"); %>
 	
 	
-	<select name="database1">
-        <option value="" selected>select</option>
+	 <select name="database">
+        <option value="selected">select</option>
         <%
         for(int i=0;i<list.size();i++) {
             String Field=list.get(i).toString();
         %>
         <option value="<%=Field %>"><%=Field %></option>
         <%} %>
-    </select>
+       
+        
+    </select> 
+	
+<%-- 	<select name="database1">
+  <c:forEach items="${list}" var="LoanName" varStatus="loop">
+    <option value="${loop.index}">
+        ${LoanName}
+    </option>
+  </c:forEach>
+</select> --%>
 	
 	
 	
-	
-	
-	
-	<%-- <select>
-	
-	
-	<c:forEach items ="${list }" var="loanName" varStatus="loop">
-	<option value="${loop.index }">
-	${loanName }
-	</option>
-	</c:forEach>
-	</select> --%>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-<%-- 	<p>Select Name :
-	<select style="size: 500px;text-align=center">
- <option value="<%= %>"><%=%></option> 
-<option value="2"> hello2</option>
-<option value="2"> hello2</option> 
-<c:forEach items="${list}">
-        <option value="${list}">${list}</option>
-    </c:forEach>
-</select>
-<select  array="list" name="my List">
-        <c:forEach var="party" items="${list}">
-    <option value="${party}" />
-</c:forEach>
-    </select>
-</p> --%>
+
 </body>
 </html>
