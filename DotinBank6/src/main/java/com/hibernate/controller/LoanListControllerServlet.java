@@ -30,8 +30,8 @@ public class LoanListControllerServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		
-		int id = (Integer) session.getAttribute("idKey");
-//		int id = Integer.parseInt(id1);
+//		int id = (Integer) session.getAttribute("idKey");
+////		int id = Integer.parseInt(id1);
 		Configuration configuration = new Configuration().configure();
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		Session session2 = sessionFactory.openSession();
@@ -39,9 +39,10 @@ public class LoanListControllerServlet extends HttpServlet {
 
 		
 				Query query = session2.createQuery(
-						"select loanType.name from LoanType loanType ");
+						"select loanType.id,loanType.name from LoanType loanType ");
 				/*query.setParameter("id",id);*/
-				ArrayList list =(ArrayList) query.list();
+				@SuppressWarnings("unchecked")
+				List<LoanType> list =(List<LoanType>) query.list();
 				
 					
 					request.setAttribute("list", list);

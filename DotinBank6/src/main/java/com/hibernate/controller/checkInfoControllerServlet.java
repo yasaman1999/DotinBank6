@@ -25,7 +25,11 @@ public class checkInfoControllerServlet extends HttpServlet {
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String loanType = (String) request.getParameter("loanType"); 
+		
+		
+			String loanType= request.getParameter("loanType");
+		
+
 		
 		Configuration configuration = new Configuration().configure();
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
@@ -36,13 +40,23 @@ public class checkInfoControllerServlet extends HttpServlet {
 				Query query1 = session.createQuery(
 						"select loanType.id from LoanType loanType WHERE loanType.name=:loanType");
 				query1.setParameter("loanType",loanType);
-				
-					List<Object[]> collection = query1.getResultList();
+				System.out.println(loanType);
+					/*List<Object[]> collection = query1.getResultList();
 					for(Object[] LoanType: collection)
 					 {	
 						int id =(Integer) LoanType[0];
 						System.out.println(id);
-					 }
+					 }*/
+					
+					
+				/*	Object result = query1.uniqueResult();
+					
+					int id =(Integer) result;
+					System.out.println(id);*/
+				int result =(Integer) query1.uniqueResult();
+				
+				
+				System.out.println(result);
 					
 					
 					

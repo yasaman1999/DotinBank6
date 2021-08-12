@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=windows-1256"
+    pageEncoding="windows-1256"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import ="java.util.ArrayList"%>
 <%@ page import ="java.util.List"%>
+<%@ page import="com.hibernate.bean.LoanType" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,29 +13,19 @@
 <body background="picc.jpeg"
 	; style="padding-top: 10px; background-repeat: no-repeat; background-size: cover;width:400px">
 	
-	 <%List list= (List)request.getAttribute("list"); %>
+	 <%List<Object[]> list= (List<Object[]>) request.getAttribute("list"); %>  
 	 
-	
-	<form form action="checkInfo" style="margin-left: 200px;font-family: verdana">
-	
-	<p>نوع تسهیلات را انتخاب کنید</p>
-	 <select name="loanType">
-        <option value="selected">-------</option>
+	 <select name="database1">
+        <option value="" selected>select</option>
         <%
-        for(int i=0;i<list.size();i++) {
-            String Field=list.get(i).toString();
+        for(Object[] LoanType: list)
+		 {	
+			int id = (Integer)LoanType[0];
+			String name = (String)LoanType[1];
         %>
-        <option value="<%=Field %>"><%=Field %></option>
+        <option value="<%=id %>"><%out.print(name); %></option>
         <%} %>
-        
     </select>
-    <br/><br/>
-    
-    <input type="submit" value="ثبت">
-    
-    </form>
-    
-	
 
 	
 	

@@ -57,7 +57,7 @@
 			}
 		
 			
-			session.setAttribute("idKey", request.getAttribute("id"));
+			
 			
 		
 			%>
