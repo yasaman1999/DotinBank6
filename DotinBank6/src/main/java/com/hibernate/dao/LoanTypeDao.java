@@ -27,14 +27,11 @@ public class LoanTypeDao {
 
 			// 4. Starting Transaction
 			Transaction transaction = session.beginTransaction();  
-			System.out.println("before new loantype");
 			LoanType loanType = new LoanType();
 			loanType.setName(name);
 			loanType.setInterestRate(interestRate);
-			System.out.println("before save");
-			session.save(loanType);
 			transaction.commit();
-			System.out.println("\n\n new loantype created \n");
+			
 
 		} catch (HibernateException e) {
 			

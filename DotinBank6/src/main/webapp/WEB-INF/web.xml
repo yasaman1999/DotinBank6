@@ -58,6 +58,12 @@
 		<description></description>
 		<servlet-class>com.hibernate.controller.LoanListControllerServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>checkInfoControllerServlet</servlet-name>
+		<display-name>checkInfoControllerServlet</display-name>
+		<description></description>
+		<servlet-class>com.hibernate.controller.checkInfoControllerServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>MainControllerServlet</servlet-name>
 		<url-pattern>/addCustomer</url-pattern>
@@ -105,6 +111,10 @@
 	<servlet-mapping>
 		<servlet-name>LoanListControllerServlet</servlet-name>
 		<url-pattern>/goToLoanListPage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>checkInfoControllerServlet</servlet-name>
+		<url-pattern>/checkInfo</url-pattern>
 	</servlet-mapping>
 
 </web-app>

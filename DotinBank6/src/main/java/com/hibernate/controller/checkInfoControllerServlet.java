@@ -9,7 +9,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -17,34 +16,36 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
-import com.hibernate.bean.LoanType;
-
 /**
- * Servlet implementation class LoanListControllerServlet
+ * Servlet implementation class checkInfoControllerServlet
  */
-public class LoanListControllerServlet extends HttpServlet {
+public class checkInfoControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
+ 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
+		String loanType = (String) request.getParameter("loanType"); 
 		
-		int id = (Integer) session.getAttribute("idKey");
-//		int id = Integer.parseInt(id1);
 		Configuration configuration = new Configuration().configure();
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
-		Session session2 = sessionFactory.openSession();
-		Transaction transaction = session2.beginTransaction();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
 
 		
-				Query query = session2.createQuery(
-						"select loanType.name from LoanType loanType ");
-				/*query.setParameter("id",id);*/
-				ArrayList list =(ArrayList) query.list();
+				Query query1 = session.createQuery(
+						"select loanType.id from LoanType loanType WHERE loanType.name=:loanType");
+				query1.setParameter("loanType",loanType);
 				
+					List<Object[]> collection = query1.getResultList();
+					for(Object[] LoanType: collection)
+					 {	
+						int id =(Integer) LoanType[0];
+						System.out.println(id);
+					 }
 					
-					request.setAttribute("list", list);
+					
+					
 				
 				 
 				RequestDispatcher rd = request.getRequestDispatcher("loanListPage.jsp");
@@ -52,12 +53,8 @@ public class LoanListControllerServlet extends HttpServlet {
 				
 				
 				transaction.commit();
-		
-		
-	
 	}
-	
-	
+
 	
 
 }

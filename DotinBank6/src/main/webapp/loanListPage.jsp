@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=windows-1256"
-    pageEncoding="windows-1256"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import ="java.util.ArrayList"%>
 <%@ page import ="java.util.List"%>
@@ -13,27 +13,29 @@
 	; style="padding-top: 10px; background-repeat: no-repeat; background-size: cover;width:400px">
 	
 	 <%List list= (List)request.getAttribute("list"); %>
+	 
 	
+	<form form action="checkInfo" style="margin-left: 200px;font-family: verdana">
 	
-	 <select name="database">
-        <option value="selected">select</option>
+	<p>نوع تسهیلات را انتخاب کنید</p>
+	 <select name="loanType">
+        <option value="selected">-------</option>
         <%
         for(int i=0;i<list.size();i++) {
             String Field=list.get(i).toString();
         %>
         <option value="<%=Field %>"><%=Field %></option>
         <%} %>
-       
         
-    </select> 
+    </select>
+    <br/><br/>
+    
+    <input type="submit" value="ثبت">
+    
+    </form>
+    
 	
-<%-- 	<select name="database1">
-  <c:forEach items="${list}" var="LoanName" varStatus="loop">
-    <option value="${loop.index}">
-        ${LoanName}
-    </option>
-  </c:forEach>
-</select> --%>
+
 	
 	
 	
