@@ -14,7 +14,7 @@
 	; style="padding-top: 10px; background-repeat: no-repeat; background-size: cover;width:400px">
 	
 	 <%List<Object[]> list= (List<Object[]>) request.getAttribute("list"); %>  
-	 
+	 <form action="checkInfo">
 	 <select name="database1">
         <option value="" selected>select</option>
         <%
@@ -26,6 +26,8 @@
         <option value="<%=id %>"><%out.print(name); %></option>
         <%} %>
     </select>
+    <input type="submit" value="Submit" />
+    </form>
 
 	
 	

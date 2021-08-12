@@ -27,7 +27,8 @@ public class checkInfoControllerServlet extends HttpServlet {
 		
 		
 		
-			String loanType= request.getParameter("loanType");
+			int id = Integer.parseInt(request.getParameter("database1"));
+			System.out.println(id);
 		
 
 		
@@ -37,32 +38,12 @@ public class checkInfoControllerServlet extends HttpServlet {
 		Transaction transaction = session.beginTransaction();
 
 		
-				Query query1 = session.createQuery(
-						"select loanType.id from LoanType loanType WHERE loanType.name=:loanType");
-				query1.setParameter("loanType",loanType);
-				System.out.println(loanType);
-					/*List<Object[]> collection = query1.getResultList();
-					for(Object[] LoanType: collection)
-					 {	
-						int id =(Integer) LoanType[0];
-						System.out.println(id);
-					 }*/
-					
-					
-				/*	Object result = query1.uniqueResult();
-					
-					int id =(Integer) result;
-					System.out.println(id);*/
-				int result =(Integer) query1.uniqueResult();
 				
-				
-				System.out.println(result);
-					
 					
 					
 				
 				 
-				RequestDispatcher rd = request.getRequestDispatcher("loanListPage.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("hello.jsp");
 				rd.forward(request, response);
 				
 				
