@@ -28,7 +28,11 @@ public class checkInfoControllerServlet extends HttpServlet {
 		
 		
 			int id = Integer.parseInt(request.getParameter("loanInfo"));
-			System.out.println(id);
+			int contractPeriod = Integer.parseInt(request.getParameter("contractPeriod"));
+			int amounttPeriod = Integer.parseInt(request.getParameter("amountPeriod"));
+			
+		
+			
 		
 
 		
@@ -50,17 +54,22 @@ public class checkInfoControllerServlet extends HttpServlet {
 			int minimumContractAmount = (Integer)GrantCondition[2];
 			int maximumContractAmount = (Integer)GrantCondition[3];
 			
-			
-
+			if(contractPeriod >= minimumContractPeriod && contractPeriod <= maximumContractPeriod) {
+				if(amounttPeriod >= minimumContractAmount && amounttPeriod <= maximumContractAmount) {
+					System.out.println("good luck");
+				}
+			}else {
+				System.out.println("bad luck");
+			}
 		 }
 		
-				
+			
 					
 					
 				
 				 
-				RequestDispatcher rd = request.getRequestDispatcher("hello.jsp");
-				rd.forward(request, response);
+				/*RequestDispatcher rd = request.getRequestDispatcher("hello.jsp");
+				rd.forward(request, response);*/
 				
 				
 				transaction.commit();
