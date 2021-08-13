@@ -27,7 +27,7 @@ public class checkInfoControllerServlet extends HttpServlet {
 		
 		
 		
-			int id = Integer.parseInt(request.getParameter("database1"));
+			int id = Integer.parseInt(request.getParameter("loanInfo"));
 			System.out.println(id);
 		
 
@@ -36,7 +36,23 @@ public class checkInfoControllerServlet extends HttpServlet {
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
+		
+		Query query = session.createQuery(
+				"select grantCondition.minimumContractPeriod,grantCondition.maximumContractPeriod,grantCondition.minimumContractAmount,grantCondition.maximumContractAmount from GrantCondition grantCondition WHERE grantCondition.loanType.id=:id");
+		query.setParameter("id",id);
+		if(query.getResultList() != null) {
+		List<Object[]> collection = query.getResultList();
+		for(Object[] GrantCondition: collection)
+		 {	
+			
+			int minimumContractPeriod = (Integer)GrantCondition[0];
+			int maximumContractPeriod = (Integer)GrantCondition[1];
+			int minimumContractAmount = (Integer)GrantCondition[2];
+			int maximumContractAmount = (Integer)GrantCondition[3];
+			
+			
 
+		 }
 		
 				
 					
@@ -52,4 +68,5 @@ public class checkInfoControllerServlet extends HttpServlet {
 
 	
 
+}
 }

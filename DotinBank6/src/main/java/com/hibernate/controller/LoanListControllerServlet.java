@@ -28,24 +28,23 @@ public class LoanListControllerServlet extends HttpServlet {
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
 		
-//		int id = (Integer) session.getAttribute("idKey");
-////		int id = Integer.parseInt(id1);
+		
+
 		Configuration configuration = new Configuration().configure();
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
-		Session session2 = sessionFactory.openSession();
-		Transaction transaction = session2.beginTransaction();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
 
 		
-				Query query = session2.createQuery(
+				Query query = session.createQuery(
 						"select loanType.id,loanType.name from LoanType loanType ");
-				/*query.setParameter("id",id);*/
+				
 				@SuppressWarnings("unchecked")
 				List<LoanType> list =(List<LoanType>) query.list();
 				
 					
-					request.setAttribute("list", list);
+				request.setAttribute("list", list);
 				
 				 
 				RequestDispatcher rd = request.getRequestDispatcher("loanListPage.jsp");

@@ -32,7 +32,7 @@ public class LoanFileControllerServlet extends HttpServlet {
 		Configuration configuration = new Configuration().configure();
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		Session session = sessionFactory.openSession();
-		Transaction transaction = session.beginTransaction();
+		
 
 		
 				Query query1 = session.createQuery(
@@ -61,7 +61,7 @@ public class LoanFileControllerServlet extends HttpServlet {
 				rd.forward(request, response);
 				
 				
-				transaction.commit();
+			
 				
 			
 		}

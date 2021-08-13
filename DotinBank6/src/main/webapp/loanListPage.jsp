@@ -13,9 +13,12 @@
 <body background="picc.jpeg"
 	; style="padding-top: 10px; background-repeat: no-repeat; background-size: cover;width:400px">
 	
+	
 	 <%List<Object[]> list= (List<Object[]>) request.getAttribute("list"); %>  
+	 
+	 
 	 <form action="checkInfo">
-	 <select name="database1">
+	 <select name="loanInfo">
         <option value="" selected>select</option>
         <%
         for(Object[] LoanType: list)
