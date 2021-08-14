@@ -32,7 +32,9 @@ public class LoanType {
 	@JoinColumn(name="loantype_ID")
 	private Set<GrantCondition> grantConditions = new HashSet<GrantCondition>(0);;
 	
-	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="loantype_ID")
+	private Set<LoanFile> loanFiles = new HashSet<LoanFile>(0);;
 	
 	public int getId() {
 		return id;
@@ -62,6 +64,13 @@ public class LoanType {
 	public void setGrantConditions(Set<GrantCondition> grantConditions) {
 		this.grantConditions = grantConditions;
 	}
+	public Set<LoanFile> getLoanFiles() {
+		return loanFiles;
+	}
+	public void setLoanFiles(Set<LoanFile> loanFiles) {
+		this.loanFiles = loanFiles;
+	}
+	
 	
 	
 	

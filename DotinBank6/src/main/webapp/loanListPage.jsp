@@ -26,7 +26,7 @@
 			<tr>
 			<td>
 					
-	 <select style="box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);"   name="loanInfo">
+	 <select style="box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);"   name="loanTypeId">
 	 
          <option  value="" selected>انواع تسهیلات</option>  
          <!-- <optgroup label=" انواع تسهیلات  "> -->

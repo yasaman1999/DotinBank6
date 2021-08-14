@@ -49,11 +49,17 @@ public class CustomerDao {
 			customer.setMobileNumber(mobileNumber);
 			customer.setPhoneNumber(phoneNumber);
 			
+			
+			
 			String SQL_QUERY = "select max(customerNumber)from Customer customer";
 			Query query = session.createQuery(SQL_QUERY);
 			List list = query.list();
 			int customerNumber = (Integer) list.get(0) + 1;
 			customer.setCustomerNumber(customerNumber);
+			
+			
+			
+			
 			/* logger.info("before save"); */
 			session.save(customer);
 			transaction.commit();

@@ -1,10 +1,16 @@
 package com.hibernate.bean;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -48,6 +54,10 @@ public class Customer {
 	
 	@Column(name = "CUSTOMERNUMBER", nullable = false)
 	private int customerNumber = 1;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="customer_ID")
+	private Set<LoanFile> loanFiles = new HashSet<LoanFile>(0);;
 	
 	public int getId() {
 		return id;
@@ -123,6 +133,13 @@ public class Customer {
 	public void setCustomerNumber(int customerNumber) {
 		this.customerNumber = customerNumber;
 	}
+	public Set<LoanFile> getLoanFiles() {
+		return loanFiles;
+	}
+	public void setLoanFiles(Set<LoanFile> loanFiles) {
+		this.loanFiles = loanFiles;
+	}
+	
 	
 	
 	
